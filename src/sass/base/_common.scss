@@ -8,7 +8,7 @@ body {
         family: getFont('mont');
     }
 
-    color: getColor('primary');
+    color: $primary;
 }
 
 a {
