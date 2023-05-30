@@ -1,0 +1,36 @@
+.btn {
+    font: {
+        family: getFont('mont');
+    }
+
+    display: block;
+    cursor: pointer;
+    // min-width: 208px;
+    // min-height: 44px;
+    color: $secondary;
+    border-radius: 38px;
+    transition: background-color .3s ease;
+    background-color: $tertiary;
+    border: none;
+    margin: 0 auto;
+    padding: 10px 41px;
+    @include font($fw: 500, $fs: 20px, $lh: 24px, $ls: 0.03em);
+    
+    &:is(:hover, :focus) { 
+        background-color: $tertiary-hover;
+    }
+
+     @include tablet {
+       // min-width: 280px;
+       // min-height: 64px;
+        padding: 20px 69.5px;
+        @include font($fw: 500, $fs: 28px, $lh: 24px, $ls: 0.03em);
+    }
+
+    @include desktop {
+        // min-width: 280px;
+        // min-height: 64px;
+        padding: 20px 69.5px;
+        @include font($fw: 500, $fs: 28px, $lh: 24px, $ls: 0.03em);
+    }
+}
