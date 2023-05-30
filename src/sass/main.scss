@@ -4,5 +4,6 @@
  */
 
 // Style dla pliku z przykładem HTML fragmentu
-@import './mixins';
+@import './utils/vars';
+@import './utils/mixins';
 @import './example';
