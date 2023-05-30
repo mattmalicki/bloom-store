@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: {
+        family: getFont('mont');
+    }
+
+    color: getColor('primary');
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include phone {
+        max-width: 480px;
+    }
+
+    @include tablet {
+        max-width: 768px;
+        padding: 0 24px;
+    }
+
+    @include desktop {
+        max-width: 1280px;
+    }
+}
