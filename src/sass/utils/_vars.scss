@@ -1,3 +1,5 @@
+    @use 'sass:string';
+    
     //colors font / background
     $primary: #000;
     $secondary: #fff;
@@ -13,3 +15,13 @@
     // border-radius
     $br4: 4px;
     $br8: 8px;
+    $br38: 38px;
+     
+    $fonts: (
+        'mont': "'Montserrat', sans-serif",
+        'int': "'Inter', sans-serif",
+    );
+
+    @function getFont($font) {
+        @return string.unquote(map-get($fonts, $font));
+    }
