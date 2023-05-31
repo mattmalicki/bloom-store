@@ -82,8 +82,28 @@ ul {
 }
 
 .header-menu {
+  font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+.header-menu__list {
+  display: flex;
+  gap: 26px;
+  flex-direction: column;
+}
+.header-menu__list-item {
+  display: flex;
+}
+.header-menu__link {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header-menu__list {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 .example {
