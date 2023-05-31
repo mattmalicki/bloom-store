@@ -10,11 +10,10 @@
     @include desktop{max-width: none;}
 
 &__position{
-    
-    align-items: center;
-    margin:0 auto;
     max-width: 480px;
     width: 100%;
+    align-items: center;
+    margin:0 auto;
     display: flex;
     justify-content: space-between;
     padding-top: 16px;
@@ -68,7 +67,8 @@
 &__icon{
     margin-right: 14px;
     cursor: pointer;
-    @include tablet {margin-right: 0;
+    @include tablet {
+        margin-right: 0;
     }
 }
 &__menu {cursor: pointer;
