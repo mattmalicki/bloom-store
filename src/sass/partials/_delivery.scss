@@ -1,6 +1,13 @@
 .delivery {
   @include font($fw: 500, $fs: 14px, $lh: 17px, $ls: normal);
 
+  @include tablet {
+    @include font($fw: 500, $fs: 24px, $lh: 29px, $ls: normal);
+  }
+
+  @include desktop {
+    @include font($fw: 500, $fs: 32px, $lh: 39px, $ls: normal);
+  }
   &__header {
     gap: 14px;
     display: flex;
@@ -11,6 +18,16 @@
     text-align: left;
 
     margin-bottom: 32px;
+
+    @include tablet {
+      @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: normal);
+      margin-bottom: 60px;
+    }
+
+    @include desktop {
+      @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: normal);
+      margin-bottom: 80px;
+    }
 
     &::after {
       content: '';
@@ -31,12 +48,12 @@
     position: relative;
 
     padding-left: 48px;
-    padding-bottom: 40px;
+    padding-bottom: 26px;
     gap: 14px;
 
     @include tablet {
       padding-left: 84px;
-      padding-bottom: 60px;
+      padding-bottom: 40px;
       gap: 20px;
     }
 
@@ -82,6 +99,7 @@
           height: 64px;
           padding-left: 25px;
           padding-top: 16px;
+          @include font($fw: 500, $fs: 26px, $lh: 32px, $ls: normal);
         }
 
         @include desktop {
@@ -90,6 +108,7 @@
           padding-left: 25px;
           padding-top: 16px;
           left: 80px;
+          @include font($fw: 500, $fs: 26px, $lh: 32px, $ls: normal);
         }
       }
     }
@@ -97,17 +116,22 @@
 
   &__image {
     max-width: 100%;
+    min-height: 135px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    object-fit: cover;
     margin-bottom: 60px;
+    object-position: left;
 
     @include tablet {
       margin-bottom: 100px;
+      min-height: 264px;
     }
 
     @include desktop {
       margin-bottom: 84px;
+      min-height: 391px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
