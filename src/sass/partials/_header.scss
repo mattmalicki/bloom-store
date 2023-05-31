@@ -1,0 +1,80 @@
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    margin: 0 auto;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    @include tablet{max-width: 1279;}
+    @include desktop{max-width: none;}
+
+&__position{
+    
+    align-items: center;
+    margin:0 auto;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    
+    @include tablet {
+        margin: 0 auto;
+        max-width: 720px;
+        width: 100%;
+        padding-top: 24px;
+    }
+    
+        @include desktop{
+        max-width: 1232px;
+        width: 100%;
+        padding-top: 28px;
+    }
+}
+&__nav {
+    display: none;
+
+    @include tablet {
+    display: flex;
+}
+
+    @include desktop{display: flex;
+    }
+
+}
+&__logo {
+    @include tablet {
+    width: 86px;
+    height: 68px;}
+    @include desktop {
+    width: 86px;
+    height: 68px;}
+
+}
+&__nav-list{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap:48px;
+}
+&__nav-item{font-size: 20px;
+    font-weight: 400;
+    line-height: 1,2;
+}
+
+
+&__icon{
+    margin-right: 14px;
+    @include tablet {margin-right: 0;
+    }
+}
+&__menu {
+    @include tablet{
+        display: none;
+    }
+    @include desktop {
+        display: none;
+    }
+}
+}
