@@ -19,9 +19,11 @@
       display: none;
     }
     &__list {
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
+      // justify-content: center;
+      // align-items: center;
+      // gap: 24px;
+
+      display: none;
     }
   }
 
@@ -30,8 +32,9 @@
       display: none;
     }
     &__list {
-      justify-content: center;
-      gap: 24px;
+      // justify-content: center;
+      // gap: 24px;
+       display: none;
     }
   }
 }
