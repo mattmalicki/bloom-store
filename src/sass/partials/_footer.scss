@@ -1,0 +1,34 @@
+.container {
+  flex-wrap: wrap;
+  gap: 30px;
+  display: flex;
+}
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font: {
+    family: getFont('int');
+  }
+
+  &__title {
+    @include font($fw: 700, $fs: 18px, $lh: 22px, $ls: 0.03em);
+  }
+  margin-bottom: 18px;
+
+  &__link {
+    @include font($fw: 500, $fs: 14px, $lh: 17px, $ls: 0.03em);
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+}
+.wth:nth-child(n + 2) {
+  margin-right: 0;
+}
+.wth {
+  width: calc(50% - 15px);
+  flex-wrap: wrap;
+  display: flex;
+}
