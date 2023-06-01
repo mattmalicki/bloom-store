@@ -72,6 +72,11 @@
     color: $primary;
   }
 
+  &__btn-call {
+    border: none;
+    background-color: transparent;
+  }
+
   &__icon {
     margin-right: 14px;
     cursor: pointer;
