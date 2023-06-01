@@ -1,34 +1,140 @@
-.container {
-  flex-wrap: wrap;
-  gap: 30px;
-  display: flex;
-}
 .footer {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: $primary;
+  color: $secondary;
   padding-top: 32px;
   padding-bottom: 32px;
   font: {
     family: getFont('int');
   }
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 54px;
+  }
+  @include desktop {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
 
+  &__container {
+    flex-wrap: wrap;
+    gap: 30px;
+    display: flex;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      gap: 44px;
+    }
+
+    @include desktop {
+      flex-wrap: nowrap;
+      gap: 96px;
+    }
+  }
+
+  &__item {
+    color: $secondary;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.21429;
+  }
+
+  &__logo {
+    display: none;
+
+    @include desktop {
+      display: block;
+      margin-right: 114px;
+    }
+
+    &--icon {
+      width: 73px;
+      height: 57px;
+      fill: $secondary;
+    }
+  }
   &__title {
     @include font($fw: 700, $fs: 18px, $lh: 22px, $ls: 0.03em);
+    margin-bottom: 18px;
+    display: block;
   }
-  margin-bottom: 18px;
-
   &__link {
     @include font($fw: 500, $fs: 14px, $lh: 17px, $ls: 0.03em);
-    text-decoration: none;
-    color: #ffffff;
-    margin-bottom: 12px;
+    color: $secondary;
+  }
+
+  &__socials {
+    display: flex;
+    border: 2px;
+    border-color: $secondary;
+    // fill: #fff;
+    gap: 23px;
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__social-list {
+    flex-direction: row;
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__social-item {
+    margin-right: 16px;
+    @include tablet {
+      margin-right: 0px;
+      margin-bottom: 18px;
+    }
+    @include desktop {
+      margin-right: 0px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__social-link {
+    stroke: $secondary;
+    border-radius: 50%;
+    list-style: none;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  &__opening {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  .wth {
+    width: calc(50% - 15px);
+    flex-wrap: wrap;
+    display: flex;
+    @include desktop {
+    }
+  }
+  .li {
+    display: block;
   }
 }
-.wth:nth-child(n + 2) {
-  margin-right: 0;
-}
-.wth {
-  width: calc(50% - 15px);
-  flex-wrap: wrap;
-  display: flex;
+
+address {
+  font-style: normal;
 }
