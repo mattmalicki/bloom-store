@@ -1,5 +1,4 @@
 .store {
-  max-width: 320px;
   padding: 60px 0;
   font: {
     family: getFont('mont');
@@ -23,17 +22,17 @@
     @include tablet {
       gap: 32px;
       margin-top: 60px;
-      margin-bottom: 52px;
+      margin-bottom: 60px;
     }
     @include desktop {
+      gap: 32px;
       margin-top: 80px;
-      margin-bottom: 28px;
+      margin-bottom: 60px;
     }
   }
   &__card {
     display: block;
     width: 100%;
-    margin-bottom: 0;
     @include tablet {
       margin-bottom: 8px;
       @include desktop {
@@ -43,18 +42,44 @@
   }
 
   &__type {
-    color: $primary;
     @include font($fw: 500, $fs: 16px, $lh: 20px, $ls: 0.03em);
+    color: $primary;
     margin-top: 12px;
     margin-bottom: 6px;
     @include tablet {
       @include font($fw: 500, $fs: 32px, $lh: 39px, $ls: 0.03em);
-      margin-top: 16px;
       margin-bottom: 8px;
+      margin-top: 16px;
+      width: 100%;
+      align-items: center;
+      gap: 8px;
+      font-size: 32px;
+      display: inline-flex;
+      white-space: nowrap;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        display: inline-block;
+      }
     }
     @include desktop {
+      width: 100%;
       @include font($fw: 500, $fs: 36px, $lh: 44px, $ls: 0.03em);
+      margin-top: 16px;
       margin-bottom: 4px;
+      gap: 16px;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        display: inline-block;
+      }
     }
   }
   &__price {
@@ -74,6 +99,7 @@
   gap: 14px;
   display: flex;
   align-items: center;
+  padding: 0 16px;
   font: {
     family: getFont('mont');
   }
@@ -86,9 +112,11 @@
   }
   @include font($fw: 700, $fs: 24px, $lh: 29px, $ls: 0.03em);
   @include tablet {
+    padding: 0;
     @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: 0.03em);
   }
   @include desktop {
+    padding: 0;
     @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: 0.03em);
   }
 }
