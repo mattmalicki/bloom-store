@@ -25,6 +25,7 @@ ul {
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
+  overflow: hidden;
 
   @include phone {
     max-width: 480px;
@@ -41,7 +42,7 @@ ul {
   }
 }
 img {
-max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
