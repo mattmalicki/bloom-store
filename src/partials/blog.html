@@ -1,12 +1,94 @@
 <section class="container blog" id="blog">
-  <h2>Blog</h2>
-  <picture>
-    <source />
-    <img src="./images/demo.jpg" />
-  </picture>
-  <picture>
-    <source />
-    <img src="./images/demo.jpg" />
-  </picture>
-  <button type="button" data-modal-open1 class="btn">Subscribe</button>
+  <h2 class="blog__subtitle">Blog</h2>
+  <div class="blog__flowers">
+    <img
+      src="./images/flowers_image2--mob@1x.jpg"
+      alt="blogflowers"
+      srcset="
+        ./images/flowers_image2--mob@2x.jpg  272w,
+        ./images/flowers_image2--tab@1x.jpg  344w,
+        ./images/flowers_image2--tab@2x.jpg  688w,
+        ./images/flowers_image2--desk@1x.jpg 390w,
+        ./images/flowers_image2--desk@2x.jpg 780w
+      "
+      sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, 136px"
+    />
+    <img
+      src="./images/flowers_image1--mob@1x.jpg"
+      alt="blogflowers"
+      srcset="
+        ./images/flowers_image1--mob@2x.jpg  272w,
+        ./images/flowers_image1--tab@1x.jpg  344w,
+        ./images/flowers_image1--tab@2x.jpg  688w,
+        ./images/flowers_image1--desk@1x.jpg 390w,
+        ./images/flowers_image1--desk@2x.jpg 780w
+      "
+      sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, 136px"
+    />
+    <img
+      src="./images/flowers_image3--mob@1x.jpg"
+      alt="blogflowers"
+      srcset="
+        ./images/flowers_image3--mob@2x.jpg  272w,
+        ./images/flowers_image3--tab@1x.jpg  344w,
+        ./images/flowers_image3--tab@2x.jpg  688w,
+        ./images/flowers_image3--desk@1x.jpg 390w,
+        ./images/flowers_image3--desk@2x.jpg 780w
+      "
+      sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, 136px"
+    />
+  </div>
+  <!-- <img
+     
+      src="./images/flowers_image4--mob@1x.jpg"
+      alt="blogflowers"
+      srcset="
+        ./images/flowers_image4--mob@2x.jpg  272w,
+        ./images/flowers_image4--tab@1x.jpg  344w,
+        ./images/flowers_image4--tab@2x.jpg  688w,
+        ./images/flowers_image4--desk@1x.jpg 390w,
+        ./images/flowers_image4--desk@2x.jpg 780w
+      "
+      sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, 136px"
+    />
+  
+  <img
+      
+      src="./images/flowers_image5--mob@1x.jpg"
+      alt="blogflowers"
+      srcset="
+        ./images/flowers_image5--mob@2x.jpg  272w,
+        ./images/flowers_image5--tab@1x.jpg  344w,
+        ./images/flowers_image5--tab@2x.jpg  688w,
+        ./images/flowers_image5--desk@1x.jpg 390w,
+        ./images/flowers_image5--desk@2x.jpg 780w
+      "
+      sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, 136px"
+    />
+  
+  <img
+       
+      src="./images/flowers_image3--mob@1x.jpg"
+      alt="blogflowers"
+      srcset="
+        ./images/flowers_image6--mob@2x.jpg  272w,
+        ./images/flowers_image6--tab@1x.jpg  344w,
+        ./images/flowers_image6--tab@2x.jpg  688w,
+        ./images/flowers_image6--desk@1x.jpg 390w,
+        ./images/flowers_image6--desk@2x.jpg 780w
+      "
+      sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, 136px"
+    />
+   -->
+  <div class="blog__arrow">
+    <svg width="50px" height="50px">
+      <use href="/src/images/icon.svg#icon-prev_arrow"></use>
+    </svg>
+    <svg width="50px" height="50px">
+      <use href="/src/images/icon.svg#icon-next_arrow"></use>
+    </svg>
+  </div>
+  <p class="blog__text">Follow to our newsletter</p>
+
+  <button type="button" href="" class="btn">Subscribe</button>
 </section>
