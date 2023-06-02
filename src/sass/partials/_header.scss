@@ -35,28 +35,31 @@
       width: 100%;
       padding-top: 28px;
     }
-}
-&__nav {
+  }
+  &__nav {
     display: none;
 
     @include tablet {
-    display: flex;
-}
-
-    @include desktop{display: flex;
+      display: flex;
     }
 
-}
-&__logo {cursor: pointer;
-    @include tablet {
-    width: 86px;
-    height: 68px;}
     @include desktop {
-    width: 86px;
-    height: 68px;}
+      display: flex;
+    }
+  }
+  &__logo {
+    cursor: pointer;
 
-}
-&__nav-list{
+    @include tablet {
+      width: 86px;
+      height: 68px;
+    }
+    @include desktop {
+      width: 86px;
+      height: 68px;
+    }
+  }
+  &__nav-list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -87,16 +90,19 @@
   &__icon {
     margin-right: 14px;
     cursor: pointer;
+
     @include tablet {
-        margin-right: 0;
+      margin-right: 0;
     }
-}
-&__menu {cursor: pointer;
-    @include tablet{
-        display: none;
+  }
+  &__menu {
+    cursor: pointer;
+
+    @include tablet {
+      display: none;
     }
     @include desktop {
-        display: none;
+      display: none;
     }
-}
+  }
 }
