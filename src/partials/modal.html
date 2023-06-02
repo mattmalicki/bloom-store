@@ -1,0 +1,80 @@
+<!--Okno modalne - Contact us-->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal__close-btn" type="button" data-modal-close>
+      <svg class="modal__close-btn-svg">
+        <use href="./images/icon.svg#icon-close_btn"></use>
+      </svg>
+    </button>
+    <h3 class="modal__title">Contact us</h3>
+    <p class="modal__description">
+      If you have any additional questions or you want to clarify something before you make an order
+      please fill in your contact details. We will call you back.
+    </p>
+    <form class="form" autocomplete="on">
+      <label class="form__label" for="user_name">Name</label>
+      <input
+        class="form__input"
+        type="text"
+        name="username"
+        minlength="3"
+        placeholder="Your name"
+        id="user_name"
+        required
+      />
+      <label class="form__label" for="user_email">Email</label>
+      <input
+        class="form__input"
+        type="email"
+        name="email"
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        placeholder="Your email"
+        id="user_email"
+        required
+      />
+      <button class="form__button" type="submit" disabled>Send</button>
+    </form>
+  </div>
+</div>
+
+<!--Okno modalne - Subscribe-->
+<div class="backdrop is-hidden" data-modal1>
+  <div class="modal modal--width">
+    <button class="modal__close-btn modal__close-btn--top" type="button" data-modal-close>
+      <svg class="modal__close-btn-svg">
+        <use href="./images/icon.svg#icon-close_btn"></use>
+      </svg>
+    </button>
+    <img
+      class="modal__img"
+      src="./images/bouquet5--mob@1x.jpg"
+      srcset="
+        ./images/bouquet5--mob@1x.jpg   272w,
+        ./images/bouquet5--mob@2x.jpg   544w,
+        ./images/bouquet5--tab@1x.jpg   588w,
+        ./images/bouquet5--tab@2x.jpg  1176w,
+        ./images/bouquet5--desk@1x.jpg  428w,
+        ./images/bouquet5--desk@2x.jpg  856w
+      "
+      sizes="(max-width: 767px) 272px, (max-width: 1279px) 588px, (min-width: 1280px) 428px"
+      alt=""
+    />
+    <form class="form form--padding" autocomplete="on">
+      <h3 class="modal__title modal__title--font">Follow to our newsletter</h3>
+      <p class="modal__description modal__description--font">
+        Be the first to get exclusive offers and the latest news on our product directly in your
+        box.
+      </p>
+      <label class="form__label" for="user_email">Email</label>
+      <input
+        class="form__input form__input--margin"
+        type="email"
+        name="email"
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        placeholder="Your email"
+        id="user_email"
+      />
+      <button class="form__button" type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>

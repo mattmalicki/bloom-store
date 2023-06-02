@@ -63,13 +63,28 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 48px;
+    gap:48px;
   }
+
+&__nav-item{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1,2;
+    cursor: pointer;
+    text-decoration: none;
+    color: $primary;
+}
+  
 
   &__nav-item {
     @include font($fw: 400, $fs: 20px, $lh: 24px, $ls: 0.03em);
     cursor: pointer;
     color: $primary;
+  }
+
+  &__btn-call {
+    border: none;
+    background-color: transparent;
   }
 
   &__icon {

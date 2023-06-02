@@ -1,0 +1,258 @@
+.backdrop {
+  position: fixed;
+  z-index: 10000;
+  transition-duration: 250ms;
+  background-color: #0000004d;
+  @include flex-center;
+  inset: 0;
+  overflow-y: scroll;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+  visibility: visible;
+  opacity: 1;
+  z-index: 10000;
+  background-color: $secondary;
+  width: 272px;
+  padding: 28px 16px;
+  position: relative;
+  font: {
+    family: getFont('mont');
+  }
+
+  &--width {
+    padding: 0;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    border: none;
+    @include flex-center;
+    background-color: inherit;
+
+    &--top {
+      top: 14px;
+      right: 14px;
+      background-color: transparent;
+    }
+  }
+
+  &__close-btn-svg {
+    width: 18px;
+    height: 18px;
+    stroke: $primary;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    @include font($fw: 600, $fs: 20px, $lh: 24px, $ls: 0.03em);
+
+    &--font {
+      @include font($fw: 600, $fs: 19px, $lh: 23px, $ls: 0.03em);
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin-bottom: 18px;
+    @include font($fw: 500, $fs: 12px, $lh: 15px, $ls: 0.03em);
+    color: $text;
+
+    &--font {
+      @include font($fw: 400, $fs: 12px, $lh: 16px, $ls: 0.03em);
+      text-align: center;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &--padding {
+    padding: 18px 16px 28px;
+  }
+
+  &__label {
+    margin-bottom: 8px;
+    @include font($fw: 500, $fs: 10px, $lh: 12px, $ls: 0.03em);
+    color: $text;
+  }
+
+  &__input {
+    border: 1px solid $normal;
+    border-radius: $br4;
+    margin-bottom: 14x;
+    width: 100%;
+    padding: 10px 12px;
+    outline: none;
+    &::placeholder {
+      @include font($fw: 500, $fs: 12px, $lh: 15px, $ls: 0.03em);
+      color: #11111166;
+    }
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+
+    &--margin {
+      &:last-of-type {
+        margin-bottom: 18px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border-color: #111111b3;
+    }
+
+    &:not(:placeholder-shown):invalid {
+      border-color: $error;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Error-logo' d='M0 10C0 4.47656 4.47656 0 10 0C15.5234 0 20 4.47656 20 10C20 15.5234 15.5234 20 10 20C4.47656 20 0 15.5234 0 10ZM6.83594 8.12891L8.67578 9.96484L6.83594 11.8359C6.47266 12.2031 6.47266 12.7969 6.83594 13.1289C7.20312 13.5273 7.79688 13.5273 8.12891 13.1289L9.96484 11.3242L11.8359 13.1289C12.2031 13.5273 12.7969 13.5273 13.1289 13.1289C13.5273 12.7969 13.5273 12.2031 13.1289 11.8359L11.3242 9.96484L13.1289 8.12891C13.5273 7.79688 13.5273 7.20312 13.1289 6.83594C12.7969 6.47266 12.2031 6.47266 11.8359 6.83594L9.96484 8.67578L8.12891 6.83594C7.79688 6.47266 7.20312 6.47266 6.83594 6.83594C6.47266 7.20312 6.47266 7.79688 6.83594 8.12891Z' fill='%23E74A3B'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    &:not(:placeholder-shown):valid {
+      border-color: $correct;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Vector' d='M0 10C0 4.47656 4.47656 0 10 0C15.5234 0 20 4.47656 20 10C20 15.5234 15.5234 20 10 20C4.47656 20 0 15.5234 0 10ZM14.5234 8.27344C14.9492 7.84766 14.9492 7.15234 14.5234 6.72656C14.0977 6.30078 13.4023 6.30078 12.9766 6.72656L8.75 10.9531L7.02344 9.22656C6.59766 8.80078 5.90234 8.80078 5.47656 9.22656C5.05078 9.65234 5.05078 10.3477 5.47656 10.7734L7.97656 13.2734C8.40234 13.6992 9.09766 13.6992 9.52344 13.2734L14.5234 8.27344Z' fill='%233CBC81'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    @include flex-center;
+    color: $secondary;
+    background-color: $inactive-btn;
+    border-radius: $br8;
+    border: none;
+    width: 100%;
+    height: 37px;
+    @include font($fw: 600, $fs: 14px, $lh: 17px, $ls: 0.03em);
+    font: {
+      family: getFont('mont');
+    }
+  }
+}
+
+.form:focus-within .form__button {
+  background-color: $tertiary;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 480px;
+    padding: 48px 32px;
+
+    &--width {
+      width: 588px;
+      padding: 0;
+    }
+
+    &__close-btn {
+      top: 24px;
+      right: 24px;
+
+      &--top {
+        top: 24px;
+        right: 24px;
+      }
+    }
+
+    &__close-btn-svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      @include font($fw: 600, $fs: 32px, $lh: 39px, $ls: 0.03em);
+
+      &--font {
+        @include font($fw: 600, $fs: 28px, $lh: 34px, $ls: 0.03em);
+      }
+    }
+
+    &__description {
+      margin-bottom: 32px;
+      @include font($fw: 500, $fs: 16px, $lh: 20px, $ls: 0.03em);
+
+      &--font {
+        @include font($fw: 400, $fs: 16px, $lh: 21px, $ls: 0.03em);
+      }
+    }
+  }
+
+  .form {
+    &--padding {
+      padding: 28px 118px 40px;
+    }
+
+    &__label {
+      @include font($fw: 500, $fs: 14px, $lh: 17px, $ls: 0.03em);
+    }
+
+    &__input {
+      margin-bottom: 24px;
+      padding: 16px;
+      &::placeholder {
+        @include font($fw: 500, $fs: 14px, $lh: 17px, $ls: 0.03em);
+      }
+      &:last-of-type {
+        margin-bottom: 38px;
+      }
+      &--margin {
+        &:last-of-type {
+          margin-bottom: 28px;
+        }
+      }
+    }
+
+    &__button {
+      height: 50px;
+      @include font($fw: 600, $fs: 18px, $lh: 22px, $ls: 0.03em);
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal {
+    &--width {
+      width: 860px;
+      display: flex;
+    }
+
+    &__img {
+      width: 428px;
+    }
+  }
+
+  .form {
+    &--padding {
+      padding: 111px 40px 112px;
+    }
+
+    &__input {
+      padding: 12px 16px;
+    }
+  }
+}

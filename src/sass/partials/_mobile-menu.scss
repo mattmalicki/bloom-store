@@ -1,0 +1,92 @@
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  & .link {
+    padding: 10px;
+    color: inherit;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  fill: $secondary;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+    &:hover,
+    &:focus {
+      fill: $primary;
+    }
+  }
+}
+
+.menu-container {
+  min-width: 320px;
+  height: 100vh;
+  // ???????????????????????
+  position: fixed;
+  inset: 0;
+  padding: 32px;
+  background-color: $tertiary;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  &.is-open {
+    transform: translateX(0);
+  }
+  & .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: $secondary;
+  }
+}
+
+.mobile-menu {
+  &__list {
+    height: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &-item {
+      @include font($fw: 400, $fs: 20px, $lh: 24px, $ls: 0.03em);
+    }
+  }
+  &__link {
+    font-family: getFont('mont');
+    color: $secondary;
+  }
+}
