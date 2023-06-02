@@ -29,6 +29,38 @@
     <include src="./partials/menu.html"></include>
 
     <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
+<<<<<<< Updated upstream
     <script src="./index.js" type="module"></script>
+=======
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/modal.js"></script>
+
+    <!-- AOS -->
+    <script>
+      AOS.init();
+    </script>
+
+    
+    <script>
+      var swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 8,
+        centeredSlides: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+>>>>>>> Stashed changes
   </body>
 </html>

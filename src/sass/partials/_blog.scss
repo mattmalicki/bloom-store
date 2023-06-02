@@ -26,58 +26,65 @@
       display: inline-block;
     }
   }
-
-  &__flowers {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 8px;
-    justify-content: center;
-    :nth-child(3) {
-      display: none;
-      @include desktop {
-        display: flex;
-      }
-    }
-
-    @include tablet {
-      gap: 32px;
-    }
-
-    @include desktop {
-      gap: 31px;
-      margin-bottom: 18px;
-    }
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
+
+  // &__flowers {
+  //   display: flex;
+  //   gap: 16px;
+  //   margin-bottom: 8px;
+  //   justify-content: center;
+  //   :nth-child(3) {
+  //     display: none;
+  //     @include desktop {
+  //       display: flex;
+  //     }
+  //   }
+
+  //   @include tablet {
+  //     gap: 32px;
+  //   }
+
+  //   @include desktop {
+  //     gap: 31px;
+  //     margin-bottom: 18px;
+  //   }
+  // }
 
   &__text {
     @include font($fw: 500, $fs: 18px, $lh: 22px, $ls: normal);
     text-align: center;
     margin-bottom: 24px;
+    margin-top: 28px;
     @include tablet {
       @include font($fs: 32px, $lh: 39px);
       margin-bottom: 32px;
+      margin-top: 32px;
     }
     @include desktop {
       @include font($fs: 32px, $lh: 39px);
       margin-bottom: 32px;
-    }
-  }
-
-  &__arrow {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 36px;
-    @include tablet {
-      gap: 30px;
-      margin-bottom: 45px;
-    }
-    @include desktop {
-      gap: 30px;
-      margin-bottom: 24px;
+      margin-top: 32px;
     }
   }
 }
+// &__arrow {
+//   display: flex;
+//   justify-content: center;
+//   gap: 25px;
+//   margin-bottom: 36px;
+//   @include tablet {
+//     gap: 30px;
+//     margin-bottom: 45px;
+//   }
+//   @include desktop {
+//     gap: 30px;
+//     margin-bottom: 24px;
+//   }
+// }
 
 .btn {
   margin-bottom: 58px;
