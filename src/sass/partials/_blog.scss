@@ -70,21 +70,18 @@
       margin-top: 32px;
     }
   }
+  &__arrow {
+    width: 67.5px;
+    fill: $primary;
+
+    @include tablet {
+      width: 98px;
+    }
+    @include desktop {
+      width: 98px;
+    }
+  }
 }
-// &__arrow {
-//   display: flex;
-//   justify-content: center;
-//   gap: 25px;
-//   margin-bottom: 36px;
-//   @include tablet {
-//     gap: 30px;
-//     margin-bottom: 45px;
-//   }
-//   @include desktop {
-//     gap: 30px;
-//     margin-bottom: 24px;
-//   }
-// }
 
 .btn {
   margin-bottom: 58px;
