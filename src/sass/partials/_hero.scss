@@ -66,7 +66,7 @@
     @include desktop {
       width: 101px;
       margin-left: 210px;
-      margin-right: 110px;
+      margin-right: 0;
       @include font($fw: 400, $fs: 32px, $lh: 39px, $ls: normal);
     }
   }
@@ -104,7 +104,8 @@
       margin-left: 20px;
     }
     @include desktop {
-      margin-left: 110px;
+      margin-left: 0;
+      margin-right: 145px;
     }
   }
 
