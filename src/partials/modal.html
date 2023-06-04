@@ -11,8 +11,8 @@
       If you have any additional questions or you want to clarify something before you make an order
       please fill in your contact details. We will call you back.
     </p>
-    <form class="form" autocomplete="on">
-      <label class="form__label" for="user_name">Name</label>
+    <form class="form" autocomplete="off">
+      <label class="form__label" for="user_name" id="nameLabel">Name</label>
       <input
         class="form__input"
         type="text"
@@ -22,7 +22,7 @@
         id="user_name"
         required
       />
-      <label class="form__label" for="user_email">Email</label>
+      <label class="form__label" for="user_email" id="emailLabel">Email</label>
       <input
         class="form__input"
         type="email"
@@ -59,20 +59,20 @@
       sizes="(max-width: 767px) 272px, (max-width: 1279px) 588px, (min-width: 1280px) 428px"
       alt=""
     />
-    <form class="form form--padding" autocomplete="on">
+    <form class="form form--padding" autocomplete="off">
       <h3 class="modal__title modal__title--font">Follow to our newsletter</h3>
       <p class="modal__description modal__description--font">
         Be the first to get exclusive offers and the latest news on our product directly in your
         box.
       </p>
-      <label class="form__label" for="user_email">Email</label>
+      <label class="form__label" for="user_emailModal1" id="emailLabelModal1">Email</label>
       <input
         class="form__input form__input--margin"
         type="email"
         name="email"
         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
         placeholder="Your email"
-        id="user_email"
+        id="user_emailModal1"
       />
       <button class="form__button" type="submit">Subscribe</button>
     </form>
