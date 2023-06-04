@@ -36,6 +36,7 @@
       color: $primary;
     }
     @include font($fw: 700, $fs: 40px, $lh: 29.26px, $ls: 0.03em);
+    text-transform: uppercase;
   }
 
   &__wrapper {

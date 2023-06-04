@@ -15,6 +15,7 @@
     align-items: center;
     gap: 14px;
     margin-bottom: 32px;
+    text-transform: uppercase;
 
     @include tablet {
       @include font($fs: 44px, $lh: 54px);

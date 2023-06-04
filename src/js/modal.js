@@ -1,5 +1,6 @@
 (() => {
   const callBtn = document.querySelector('.header__btn-call');
+  const heroBtn = document.querySelector('.hero__btn');
   const btn = document.querySelector('.btn');
   const btn1 = document.querySelector('.btn1');
   const modal1 = document.querySelector('[data-modal]');
@@ -8,6 +9,7 @@
   const modal2CloseBtn = modal2.querySelector('[data-modal-close]');
 
   callBtn.addEventListener('click', toggleModal1);
+  heroBtn.addEventListener('click', toggleModal1);
   btn.addEventListener('click', toggleModal1);
   btn1.addEventListener('click', toggleModal2);
 
