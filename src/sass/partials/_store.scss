@@ -6,11 +6,11 @@
 
   @include tablet {
     max-width: 768px;
-    padding: 100px 24px 60px 24px;
+    padding: 100px 24px 0 24px;
   }
   @include desktop {
     max-width: 1280px;
-    padding: 100px 24px;
+    padding: 100px 24px 0 24px;
   }
   &__list {
     display: flex;

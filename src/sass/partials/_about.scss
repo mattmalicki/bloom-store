@@ -1,4 +1,13 @@
 .about {
+  padding: 60px 0;
+  @include tablet {
+    max-width: 768px;
+    padding: 100px 24px 0 24px;
+  }
+  @include desktop {
+    max-width: 1280px;
+    padding: 100px 24px 0 24px;
+  }
   &__title-box {
     display: flex;
     align-items: center;
