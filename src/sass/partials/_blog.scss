@@ -1,0 +1,94 @@
+.blog {
+  &__subtitle {
+    @include font($fw: 700, $fs: 24px, $lh: 29px, $ls: normal);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 32px;
+
+    @include tablet {
+      @include font($fs: 44px, $lh: 54px);
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    @include desktop {
+      @include font($fs: 44px, $lh: 54px);
+      margin-bottom: 122px;
+      gap: 16px;
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      display: inline-block;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  // &__flowers {
+  //   display: flex;
+  //   gap: 16px;
+  //   margin-bottom: 8px;
+  //   justify-content: center;
+  //   :nth-child(3) {
+  //     display: none;
+  //     @include desktop {
+  //       display: flex;
+  //     }
+  //   }
+
+  //   @include tablet {
+  //     gap: 32px;
+  //   }
+
+  //   @include desktop {
+  //     gap: 31px;
+  //     margin-bottom: 18px;
+  //   }
+  // }
+
+  &__text {
+    @include font($fw: 500, $fs: 18px, $lh: 22px, $ls: normal);
+    text-align: center;
+    margin-bottom: 24px;
+    margin-top: 28px;
+    @include tablet {
+      @include font($fs: 32px, $lh: 39px);
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+    @include desktop {
+      @include font($fs: 32px, $lh: 39px);
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+  }
+  &__arrow {
+    width: 67.5px;
+    fill: $primary;
+
+    @include tablet {
+      width: 98px;
+    }
+    @include desktop {
+      width: 98px;
+    }
+  }
+}
+
+.btn {
+  margin-bottom: 58px;
+  @include tablet {
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    margin-bottom: 100px;
+  }
+}

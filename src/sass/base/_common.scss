@@ -22,8 +22,10 @@ ul {
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
+  overflow: hidden;
 
   @include phone {
     max-width: 480px;
@@ -36,5 +38,11 @@ ul {
 
   @include desktop {
     max-width: 1280px;
+    padding: 0 24px;
   }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

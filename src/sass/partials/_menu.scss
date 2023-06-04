@@ -12,6 +12,10 @@
     &__list {
       display: none;
     }
+    &__btn {
+      border: none;
+      background-color: #0000;
+    }
   }
 
   @include tablet {
@@ -34,7 +38,7 @@
     &__list {
       // justify-content: center;
       // gap: 24px;
-       display: none;
+      display: none;
     }
   }
 }
