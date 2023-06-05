@@ -74,12 +74,13 @@
 
 .mobile-menu {
   &__list {
-    height: 100%;
+    // height: 100%;
     padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
+    gap: 26px;
 
     &-item {
       @include font($fw: 400, $fs: 20px, $lh: 24px, $ls: 0.03em);
