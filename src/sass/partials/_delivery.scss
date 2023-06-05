@@ -1,5 +1,5 @@
 .delivery {
-  padding: 60px 0;
+// padding-bottom: 60px;
 
   @include tablet {
     padding: 100px 24px 0px 24px;
@@ -22,7 +22,7 @@
       @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: normal);
       margin-bottom: 60px;
     }
-
+  
     @include desktop {
       @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: normal);
       margin-bottom: 80px;
@@ -137,3 +137,15 @@
     }
   }
 }
+
+ .subtitle {
+    margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 63px;
+    }
+
+    @include desktop {
+      margin-bottom: 103px;
+    }
+ }
