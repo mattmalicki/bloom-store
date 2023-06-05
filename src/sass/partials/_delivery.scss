@@ -1,12 +1,5 @@
 .delivery {
-// padding-bottom: 60px;
 
-  @include tablet {
-    padding: 100px 24px 0px 24px;
-  }
-  @include desktop {
-    padding-top: 100px;
-  }
   &__header {
     gap: 14px;
     display: flex;
