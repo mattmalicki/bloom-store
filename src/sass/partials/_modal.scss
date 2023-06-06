@@ -68,6 +68,10 @@
       @include font($fw: 600, $fs: 19px, $lh: 23px, $ls: 0.03em);
       text-align: center;
     }
+
+    &--center {
+      text-align: center;
+    }
   }
 
   &__description {
@@ -79,6 +83,16 @@
       @include font($fw: 400, $fs: 12px, $lh: 16px, $ls: 0.03em);
       text-align: center;
     }
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    width: 188px;
+    height: 142px;
+    margin-bottom: 16px;
   }
 }
 
@@ -207,6 +221,11 @@
       &--font {
         @include font($fw: 400, $fs: 16px, $lh: 21px, $ls: 0.03em);
       }
+    }
+
+    &__icon {
+      width: 367px;
+      height: 202px;
     }
   }
 
