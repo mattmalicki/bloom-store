@@ -1,6 +1,4 @@
 .menu {
-  width: 200px;
-  height: 200px;
   display: flex;
   padding: 0;
   margin: 0;
@@ -49,6 +47,9 @@
 }
 
 .menu-container {
+  min-width: 320px;
+  height: 100vh;
+  // ???????????????????????
   position: fixed;
   inset: 0;
   padding: 32px;
@@ -56,7 +57,7 @@
   z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -72,21 +73,21 @@
 }
 
 .mobile-menu {
-  height: 80vh;
-  list-style: none;
-  &__link {
-    font-family: getFont('mont');
-    color: $secondary;
-  }
   &__list {
+    // height: 100%;
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    // justify-content: space-between;
     gap: 26px;
 
     &-item {
       @include font($fw: 400, $fs: 20px, $lh: 24px, $ls: 0.03em);
     }
+  }
+  &__link {
+    font-family: getFont('mont');
+    color: $secondary;
   }
 }

@@ -1,14 +1,41 @@
-<main class="container main" id="top">
-  <h1 class="main__header">ANEMONE</h1>
-  <div>
-    <p>flower studio</p>
-    <picture>
-      <source />
-      <img src="./images/demo.jpg" class="main__img" />
-    </picture>
-    <button type="button" class="main__btn">
-      <svg width="64" height="76" class="icon">
-        <!-- <use href="./images/icons.svg#icon-main"></use> -->
+<main class="container hero" id="top">
+  <div class="hero__container">
+    <h1 class="hero__header">Anemone</h1>
+    <p class="hero__title" data-aos="zoom-in">flower studio</p>
+    <div class="hero__image">
+      <picture>
+        <source
+          media="(max-width:768px)"
+          srcset="./images/image_home-page--mob@2x.jpg 2x, ./images/image_home-page--mob@1x.jpg 1x"
+        />
+
+        <source
+          media="(min-width:768px)"
+          srcset="./images/image_home-page--tab@2x.jpg 2x, ./images/image_home-page--tab@1x.jpg 1x"
+        />
+
+        <source
+          media="(min-width:1280px)"
+          srcset="
+            ./images/image_home-page--desk@2x.jpg 2x,
+            ./images/image_home-page--desk@1x.jpg 1x
+          "
+        />
+
+        <img
+          src="./images/image_home-page--mob@1x.jpg"
+          alt="flower"
+          loading="lazy"
+          width="390"
+          height="636"
+        />
+      </picture>
+    </div>
+    <button type="button" class="hero__btn" data-aos="zoom-in" aria-label="contact us">
+      <svg class="hero__svg" width="64" height="76" class="icon">
+        <use class="hero__svg--mob" href="./images/icon.svg#icon-btn_S"></use>
+        <use class="hero__svg--tab" href="./images/icon.svg#icon-btn_M"></use>
+        <use class="hero__svg--desk" href="./images/icon.svg#icon-btn_L"></use>
       </svg>
     </button>
   </div>

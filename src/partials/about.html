@@ -1,16 +1,23 @@
 <section class="container about" id="about">
-  <header>
-    <h2>About</h2>
-  </header>
-  <div>
-    <p>
+  <h2 class="subtitle">About</h2>
+  <div class="about__wrapper">
+    <p class="about__text" data-aos="zoom-in-down">
       We are a minimalistic flower studio. We love people and flowers. Therefore, every day we give
       people the beauty and joy creating stylish and modern masterpieces. Every bouquet we create is
       unique as you are.
     </p>
-    <picture>
-      <source />
-      <img src="./images/demo.jpg" />
-    </picture>
+    <img
+      class="about__img"
+      src="./images/image_about--desk@1x.jpg"
+      srcset="
+        ./images/image_about--mob@1x.jpg   288w,
+        ./images/image_about--mob@2x.jpg   576w,
+        ./images/image_about--tab@1x.jpg   344w,
+        ./images/image_about--tab@2x.jpg   688w,
+        ./images/image_about--desk@1x.jpg  632w,
+        ./images/image_about--desk@2x.jpg 1264w
+      "
+      sizes="(max-width: 767px) 288px, (max-width: 1279px) 344px, (min-width: 1280px) 632px,"
+    />
   </div>
 </section>

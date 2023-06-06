@@ -1,0 +1,113 @@
+.about {
+  padding-bottom: 60px;
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 24px 100px 24px;
+  }
+  @include desktop {
+    max-width: 1280px;
+    padding: 0 24px 100px 24px;
+  }
+
+  &__title {
+    font: {
+      family: getFont('mont');
+      
+    }
+    color: $primary;
+    text-transform: uppercase;
+    
+    @include font($fw: 700, $fs: 24px, $lh: 29px, $ls: normal);
+    
+    text-align: left;
+
+    margin-bottom: 32px;
+
+    @include tablet {
+      @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: normal);
+      margin-bottom: 60px;
+    }
+
+    @include desktop {
+      @include font($fw: 700, $fs: 44px, $lh: 54px, $ls: normal);
+      margin-bottom: 80px;
+    }
+    
+    
+  }
+
+  &__wrapper {
+    // margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 100px;
+    }
+
+    @include tablet {
+      display: flex;
+      gap: 54px;
+    }
+
+    @include desktop {
+      display: flex;
+      gap: 90px;
+    }
+  }
+
+  &__text {
+    max-width: 288px;
+    margin-bottom: 16px;
+    color: $primary;
+    font: {
+      family: getFont('mont');
+    }
+
+    @include font($fw: 400, $fs: 16px, $lh: 20px, $ls: 0.03em);
+
+    @include tablet {
+      @include font($fw: 400, $fs: 20px, $lh: 24.38px, $ls: 0.03em);
+      margin: 0;
+      max-width: 322px;
+      display: flex;
+      align-items: center;
+    }
+    @include desktop {
+      max-width: 510px;
+
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      @include font($fw: 400, $fs: 22px, $lh: 27px, $ls: 0.03em);
+      margin: 0;
+    }
+  }
+
+  &__img {
+    max-width: 288px;
+    display: flex;
+    justify-items: center;
+
+    @include tablet {
+      max-width: 344px;
+    }
+
+    @include desktop {
+      max-width: 632px;
+    }
+  }
+}
+
+
+ .subtitle {
+    margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      margin-bottom: 26px;
+    }
+ }
