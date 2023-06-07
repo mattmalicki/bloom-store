@@ -35,9 +35,7 @@
   }
 
   function openThankYouModal(event) {
-    event.preventDefault();
-    toggleModal1();
-    toggleModal2();
-    toggleModal3();
+    modal1.classList.toggle('is-hidden');
+    modal2.classList.toggle('is-hidden');
   }
 })();
