@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "1.1.0",
   "description": "",
-  "homepage": "https://krzysztof-kryczka.github.io/bloom-store",
+  "homepage": "https://mattmalicki.github.io/bloom-store",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /bloom-store/"
